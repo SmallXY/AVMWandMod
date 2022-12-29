@@ -1,0 +1,128 @@
+{
+	"credit": "Made with Blockbench",
+	"texture_size": [32, 32],
+	"textures": {
+		"0": "avmwandmod:item/creative",
+		"particle": "avmwandmod:item/creative"
+	},
+	"elements": [
+		{
+			"name": "changzaokuai",
+			"from": [-2, 22, -2],
+			"to": [5, 29, 5],
+			"faces": {
+				"north": {"uv": [9, 12.5, 12.5, 16], "texture": "#0"},
+				"east": {"uv": [9, 9, 12.5, 12.5], "texture": "#0"},
+				"south": {"uv": [2, 12.5, 5.5, 16], "texture": "#0"},
+				"west": {"uv": [5.5, 12.5, 9, 16], "texture": "#0"},
+				"up": {"uv": [12.5, 9, 16, 12.5], "texture": "#0"},
+				"down": {"uv": [12.5, 12.5, 16, 16], "texture": "#0"}
+			}
+		},
+		{
+			"name": "gan",
+			"from": [0, 0, 0],
+			"to": [2, 21, 2],
+			"faces": {
+				"north": {"uv": [0, 0, 1.5, 10], "texture": "#0"},
+				"east": {"uv": [1.5, 0, 3, 10], "texture": "#0"},
+				"south": {"uv": [3, 0, 4.5, 10], "texture": "#0"},
+				"west": {"uv": [4.5, 0, 6, 10], "texture": "#0"},
+				"up": {"uv": [7.5, 1.5, 6, 0], "texture": "#0"},
+				"down": {"uv": [7.5, 1.5, 6, 3], "texture": "#0"}
+			}
+		},
+		{
+			"name": "xia",
+			"from": [1, 21, 1],
+			"to": [2, 22, 7],
+			"faces": {
+				"north": {"uv": [9, 1, 9.5, 1.5], "texture": "#0"},
+				"east": {"uv": [6, 6, 10, 6.5], "texture": "#0"},
+				"south": {"uv": [9, 1.5, 9.5, 2], "texture": "#0"},
+				"west": {"uv": [6, 6.5, 10, 7], "texture": "#0"},
+				"up": {"uv": [6.5, 11, 6, 7], "texture": "#0"},
+				"down": {"uv": [7, 7, 6.5, 11], "texture": "#0"}
+			}
+		},
+		{
+			"name": "zhong",
+			"from": [1, 22, 6],
+			"to": [2, 29, 7],
+			"rotation": {"angle": 0, "axis": "y", "origin": [1, 21, 8]},
+			"faces": {
+				"north": {"uv": [7, 7, 7.5, 11], "texture": "#0"},
+				"east": {"uv": [7.5, 0, 8, 4], "texture": "#0"},
+				"south": {"uv": [7.5, 7, 8, 11], "texture": "#0"},
+				"west": {"uv": [8, 0, 8.5, 4], "texture": "#0"},
+				"up": {"uv": [9.5, 2.5, 9, 2], "texture": "#0"},
+				"down": {"uv": [9.5, 2.5, 9, 3], "texture": "#0"}
+			}
+		},
+		{
+			"name": "shang",
+			"from": [1, 29, 1],
+			"to": [2, 30, 7],
+			"rotation": {"angle": 0, "axis": "y", "origin": [1, 29, 8]},
+			"faces": {
+				"north": {"uv": [9, 3, 9.5, 3.5], "texture": "#0"},
+				"east": {"uv": [7.5, 4, 11.5, 4.5], "texture": "#0"},
+				"south": {"uv": [9, 3.5, 9.5, 4], "texture": "#0"},
+				"west": {"uv": [7.5, 4.5, 11.5, 5], "texture": "#0"},
+				"up": {"uv": [8.5, 11, 8, 7], "texture": "#0"},
+				"down": {"uv": [9, 0, 8.5, 4], "texture": "#0"}
+			}
+		},
+		{
+			"name": "jihuo",
+			"from": [0, 30, 0],
+			"to": [2, 32, 2],
+			"faces": {
+				"north": {"uv": [7.5, 5, 9, 6], "texture": "#0"},
+				"east": {"uv": [8.5, 7, 10, 8], "texture": "#0"},
+				"south": {"uv": [8.5, 8, 10, 9], "texture": "#0"},
+				"west": {"uv": [9, 0, 10.5, 1], "texture": "#0"},
+				"up": {"uv": [7.5, 4.5, 6, 3], "texture": "#0"},
+				"down": {"uv": [7.5, 4.5, 6, 6], "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"translation": [7, -4.75, 9.25]
+		},
+		"thirdperson_lefthand": {
+			"translation": [-7, 0, 9.5]
+		},
+		"firstperson_righthand": {
+			"rotation": [-43, -5, 0],
+			"translation": [12, 0, 0]
+		},
+		"firstperson_lefthand": {
+			"rotation": [-41, 0, 0],
+			"translation": [0, 0, 4.75]
+		},
+		"gui": {
+			"rotation": [-67.71, 41.54, 74.81],
+			"translation": [14, -0.25, 0]
+		},
+		"head": {
+			"rotation": [-89, 0, 0],
+			"translation": [6.5, 7.5, 14.5]
+		},
+		"fixed": {
+			"rotation": [-92.19, -89, -92.16],
+			"translation": [-6, -7, 6]
+		}
+	},
+	"groups": [
+		{
+			"name": "group",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"nbt": "{}",
+			"armAnimationEnabled": false,
+			"children": [0, 1, 2, 3, 4, 5]
+		}
+	]
+}
