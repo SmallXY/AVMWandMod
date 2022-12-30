@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.player.AttackBlockCallback;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.lanternmc.avmwandmod.NBT.CopyItem;
 import net.lanternmc.avmwandmod.red.CommandWand;
 import net.lanternmc.avmwandmod.red.RedWands;
 import net.minecraft.block.BlockState;
@@ -19,13 +20,13 @@ import java.io.File;
 
 public class AVMWandMod implements ModInitializer {
 
-    private static final Item AVM_WAND_EMPTY =
+    public static final Item AVM_WAND_EMPTY =
             Registry.register(Registries.ITEM, new Identifier("avmwandmod", "red"),
                     new Item(new FabricItemSettings().maxCount(1)));
-    private static final Item AVM_WAND_MC =
+    public static final Item AVM_WAND_MC =
             Registry.register(Registries.ITEM, new Identifier("avmwandmod", "creative"),
                     new RedWands(new FabricItemSettings().maxCount(1)));
-    private static final Item AVM_WAND_CB =
+    public static final Item AVM_WAND_CB =
             Registry.register(Registries.ITEM, new Identifier("avmwandmod", "commandblock"),
                     new CommandWand(new FabricItemSettings().maxCount(1)));
 

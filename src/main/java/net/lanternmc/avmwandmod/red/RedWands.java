@@ -22,10 +22,10 @@ public class RedWands extends Item {
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity p, Hand hand) {
+
         //删除save
         if (OSinfo.isWindows()) {
             new Delete().DeleteBat();
-//            p.sendMessage(Text.of(FilePath.mcRoot.getAbsolutePath()));
         } else {
             new Delete().DeleteSh();
         }
