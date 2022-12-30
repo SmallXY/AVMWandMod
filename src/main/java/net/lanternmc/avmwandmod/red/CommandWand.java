@@ -1,7 +1,7 @@
 package net.lanternmc.avmwandmod.red;
 
-import net.lanternmc.avmwandmod.Command.CmdGUI;
-import net.lanternmc.avmwandmod.Command.CmdScreen;
+import net.lanternmc.avmwandmod.NBT.NBTManager;
+import net.lanternmc.avmwandmod.Utils.UseCommand;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -17,7 +17,9 @@ public class CommandWand extends Item {
     }
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity p, Hand hand) {
-
+        if(p.getStackInHand(hand).hasNbt()) {
+            UseCommand.init(p, NBTManager.loadNBT(p.getStackInHand(hand)));
+        }
         return TypedActionResult.success(p.getStackInHand(hand));
     }
 
