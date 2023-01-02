@@ -28,6 +28,12 @@ public class CmdGUI extends LightweightGuiDescription {
             }
         });
 
+        panel.add(button, 0,20);
+
+        setFullscreen(true);
+        setRootPanel(panel);
+
+
 //        () -> {new CmdRunnable(player)
 //            assert MinecraftClient.getInstance().player != null;
 //            MinecraftClient.getInstance().player.sendMessage(Text.of("- " + inPut.getText()));
@@ -38,11 +44,6 @@ public class CmdGUI extends LightweightGuiDescription {
 //            MinecraftClient.getInstance().player.sendMessage(Text.of("Width- " + inPut.getWidth()));
 //            MinecraftClient.getInstance().player.sendMessage(Text.of("Y- " + inPut.getY()));
 //        }
-
-        panel.add(button, 0,20);
-
-        setFullscreen(true);
-        setRootPanel(panel);
     }
 
 }

@@ -29,6 +29,9 @@ public class AVMWandMod implements ModInitializer {
     public static final Item AVM_WAND_CB =
             Registry.register(Registries.ITEM, new Identifier("avmwandmod", "commandblock"),
                     new CommandWand(new FabricItemSettings().maxCount(1)));
+    public static final Item AVM_WAND_LCB =
+            Registry.register(Registries.ITEM, new Identifier("avmwandmod", "lapiswand"),
+                    new CommandWand(new FabricItemSettings().maxCount(1)));
 
 
     @Override
@@ -37,6 +40,7 @@ public class AVMWandMod implements ModInitializer {
             content.add(AVM_WAND_EMPTY);
             content.add(AVM_WAND_MC);
             content.add(AVM_WAND_CB);
+            content.add(AVM_WAND_LCB);
         });
         File xe = new File("");
         System.out.println(xe.getAbsolutePath());

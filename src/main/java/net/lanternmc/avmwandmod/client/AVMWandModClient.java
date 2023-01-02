@@ -20,9 +20,11 @@ public class AVMWandModClient implements ClientModInitializer {
 //        HandledScreens.<BianXie, ExampleBlockScreen>register(MyMod.SCREEN_HANDLER_TYPE, (gui, inventory, title) -> new ExampleBlockScreen(gui, inventory.player, title));
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (keyBinding.wasPressed()) {
-                if (client.player != null
-                        && client.player.getMainHandStack().getItem() == AVMWandMod.AVM_WAND_CB) {
-                    client.setScreen(new CmdScreen(new CmdGUI(client.player)));
+                if (client.player != null) {
+                    if (client.player.getMainHandStack().getItem() == AVMWandMod.AVM_WAND_CB
+                            || client.player.getMainHandStack().getItem() == AVMWandMod.AVM_WAND_LCB) {
+                        client.setScreen(new CmdScreen(new CmdGUI(client.player)));
+                    }
                 }
             }
         });
