@@ -8,6 +8,7 @@ public class Test {
 
     public void init() {
         DefaultClientResourcePackProvider rp = new DefaultClientResourcePackProvider(Path.of("resourcepacks","resourcepacks"));
+
     }
 
 }

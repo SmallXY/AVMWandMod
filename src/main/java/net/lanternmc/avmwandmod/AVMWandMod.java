@@ -7,6 +7,7 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.lanternmc.avmwandmod.NBT.CopyItem;
 import net.lanternmc.avmwandmod.red.CommandWand;
 import net.lanternmc.avmwandmod.red.RedWands;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.item.Item;
@@ -15,6 +16,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Identifier;
+import net.minecraft.world.World;
 
 import java.io.File;
 
@@ -43,6 +45,7 @@ public class AVMWandMod implements ModInitializer {
             content.add(AVM_WAND_LCB);
         });
         File xe = new File("");
+        Block block = Registries.BLOCK.get(new Identifier("minecraft", "stone"));
         System.out.println(xe.getAbsolutePath());
         AttackBlockCallback.EVENT.register((player, world, hand, pos, direction) -> {
             BlockState state = world.getBlockState(pos);
@@ -53,7 +56,9 @@ public class AVMWandMod implements ModInitializer {
             }
             return ActionResult.PASS;
         });
-
+        // Use fabric change block at world 0, 100, 0 to stone
+        // world.setBlockState(new BlockPos(0, 100, 0), Blocks.STONE.getDefaultState());
+        World world = player.world;
     }
 
 }
